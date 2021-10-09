@@ -1,0 +1,40 @@
+.student-table-row {
+
+  & > .actions {
+      color: #00C1B1!important;
+
+  }
+
+  &:nth-child(odd){
+    background: #fff;
+  }
+
+  & > th {
+    padding: .7rem .5rem!important; 
+    font-weight: 400!important;
+    border-color: #eee!important;
+    background: #F9FAFB!important;
+
+
+  }
+
+  & > td {
+    padding: 1rem;
+    border: none;
+  }
+
+}
+
+.student-table {
+  border-radius: 1rem!important;
+  font-family: 'Inter', sans-serif;
+  
+  text-align: left;
+  color: #828282!important;
+  overflow-x: scroll;
+
+   @media(max-width: 807px){
+    width: max-content!important;
+
+  }
+}

@@ -1,0 +1,42 @@
+.student-form-header {
+    font-size: 13px!important;
+
+  & > th {
+    border: none;
+  }
+}
+
+
+
+
+.action-btn, .action-btn:hover {
+  background: #00C1B1;
+  border-radius: 6px;
+  border: none;
+  color: white!important;
+}
+
+.action-text {
+  color: #00C1B1
+}
+
+
+.font-normal {
+  font-weight: 400!important;
+}
+
+.ant-modal-header, .ant-modal-footer{
+  border: none;
+}
+
+.ant-modal-footer{
+  background: #16295A;
+}
+
+.antd-modal-content{
+  width: 900px!important;
+}
+
+.ant-btn .ant-btn-primary .ant-btn-primary:hover, .ant-btn-primary:focus{
+  background: #00C1B1!important;
+}

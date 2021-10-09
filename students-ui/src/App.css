@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+@import '~antd/dist/antd.css';
+/* @import "react-datepicker/dist/react-datepicker.css"; */
+
+
+
+body {
+  background: #F7F8FB!important;
+  font-family: 'Inter', sans-serif!important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
