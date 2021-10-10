@@ -8,7 +8,7 @@ export interface FecthStudentsAction {
 
 export interface FetchStudentsSuccessAction {
   type: ActionType.FETCH_STUDENTS_SUCCESS,
-  payload: string[];
+  payload: Student[];
 }
 
 export interface FetchStudentsErrorAction {
@@ -16,32 +16,64 @@ export interface FetchStudentsErrorAction {
   payload: string;
 }
 
-export interface ListStudentsAction {
-  type: ActionType.LIST_STUDENTS
+export interface CreateStudentAction {
+  type: ActionType.CREATE_STUDENT
 }
 
-export interface EditStudentAction {
-  type: ActionType.EDIT_STUDENT,
-  payload: Student;
+export interface CreateStudentSuccessAction {
+  type: ActionType.CREATE_STUDENT_SUCCESS,
+  payload: Student
+}
 
+export interface CreateStudentErrorAction {
+  type: ActionType.CREATE_STUDENT_ERROR,
+  payload: string;
+}
+
+export interface UpdateStudentAction {
+  type: ActionType.UPDATE_STUDENT
+}
+
+export interface UpdateStudentSuccessAction {
+  type: ActionType.UPDATE_STUDENT_SUCCESS,
+  payload: Student;
+}
+
+export interface UpdateStudentErrorAction {
+  type: ActionType.UPDATE_STUDENT_ERROR,
+  payload: string;
 }
 
 export interface DeleteStudentAction {
-  type: ActionType.DELETE_STUDENT,
-  payload: string;
-  
+  type: ActionType.DELETE_STUDENT
 }
 
-export interface CreateStudentAction {
-  type: ActionType.CREATE_STUDENT,
-  payload: Student;
+export interface DeleteStudentSuccessAction {
+  type: ActionType.DELETE_STUDENT_SUCCESS
+  payload: number
 }
+
+export interface DeleteStudentErrorAction {
+  type: ActionType.DELETE_STUDENT_ERROR,
+  payload: string;
+}
+
+
+
 
 export type Action =
   | FecthStudentsAction
   | FetchStudentsSuccessAction
   | FetchStudentsErrorAction
-  | ListStudentsAction
-  | EditStudentAction
-  | DeleteStudentAction
   | CreateStudentAction
+  | CreateStudentSuccessAction
+  | CreateStudentErrorAction
+  | UpdateStudentAction
+  | UpdateStudentSuccessAction
+  | UpdateStudentErrorAction
+  | DeleteStudentAction
+  | DeleteStudentErrorAction
+  | DeleteStudentSuccessAction
+
+
+  

@@ -8,14 +8,14 @@ import './AddStudents.scss';
 
 export default function AddStudents() {
   
-  const {createStudent} = useActions()
+  const {createStudentAsync} = useActions()
 
 //   const randomId = (): string => {
 //   return Math.random().toString(36).substr(2, 5);
 // }
 
   // courseData states
-  const [courseData, setCourseData] = useState({id: '1', firstName: '', lastName: '', courseName: '', numberOfHrs: '', price: '' });
+  const [courseData, setCourseData] = useState({id: 1, firstName: '', lastName: '', courseName: '', numberOfHrs: '', price: '' });
   const [studentDob, setStudentDob] = useState(new Date().toLocaleDateString().split('/').reverse().join('/'));
   
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -57,11 +57,9 @@ export default function AddStudents() {
     else {
       // closing the modal and creating the students
       setIsModalVisible(false);
-      // console.log({ ...courseData, studentDob });
-      createStudent({ ...courseData, studentDob })
-
+      createStudentAsync({ ...courseData, studentDob })
       // setting the field to an empty state after submitting
-      setCourseData({id: '1' , firstName: '', lastName: '', courseName: '', numberOfHrs: '', price: '' })
+      setCourseData({id: 1 , firstName: '', lastName: '', courseName: '', numberOfHrs: '', price: '' })
       // setStudentDob(new Date())
 
     }

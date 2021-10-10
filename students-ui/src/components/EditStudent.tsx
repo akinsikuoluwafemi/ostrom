@@ -10,7 +10,7 @@ interface EditStudentProps {
 
 const EditStudent: React.FC<EditStudentProps> = ({student}) => {
 
-  const { editStudent} = useActions()
+  const { updateStudentAsync } = useActions()
 
 
 
@@ -55,7 +55,7 @@ const EditStudent: React.FC<EditStudentProps> = ({student}) => {
       // closing the modal and creating the students
       setIsModalVisible(false);
       // console.log({ ...courseData, studentDob });
-      editStudent({ ...courseData, studentDob })
+      updateStudentAsync({ ...courseData, studentDob })
 
     }
     

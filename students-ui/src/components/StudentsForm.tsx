@@ -9,7 +9,7 @@ import moment from 'moment';
 
 
 interface CourseDataProps {
-  id: string;
+  id: number;
   firstName: string;
   lastName: string;
   courseName: string;

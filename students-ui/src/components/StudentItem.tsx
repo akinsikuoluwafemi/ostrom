@@ -14,8 +14,7 @@ interface StudentItemProps {
 
 const StudentItem: React.FC<StudentItemProps> = ({student}) => {
 
-  const {deleteStudent} = useActions()
-
+  const {deleteStudentAsync} = useActions()
 
     return (
           <tr className="student-table-row">
@@ -27,7 +26,7 @@ const StudentItem: React.FC<StudentItemProps> = ({student}) => {
               <td>{ student.numberOfHrs}</td>
               <td>{ student.price} €</td>
               <td className="actions"><EditStudent student={student}/></td>
-              <td onClick={() => deleteStudent(student.id)} className="actions">Delete</td>
+              <td onClick={() => deleteStudentAsync(student.id)} className="actions">Delete</td>
         </tr>
         
   )
