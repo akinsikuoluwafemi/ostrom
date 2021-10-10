@@ -1,4 +1,3 @@
-import * as studentCRUD from './student-crud';
 
 
 /**
@@ -8,6 +7,7 @@ import * as dotenv from "dotenv";
 import express from "express";
 import cors from "cors";
 import helmet from "helmet";
+import { itemsRouter } from './items/items.router';
 
 dotenv.config();
 
@@ -31,6 +31,7 @@ const app = express();
 app.use(helmet());
 app.use(cors());
 app.use(express.json());
+app.use("/api/student/items", itemsRouter);
 
 
 /**
@@ -43,10 +44,3 @@ app.listen(PORT, () => {
 
 app.get('/', (req, res) => res.send('Welcome to Students App using typescript'));
 
-app.get('/students', studentCRUD.getStudentList);
-
-app.post('/students', studentCRUD.createStudent);
-
-app.patch('/updatestudent', studentCRUD.updateStudent);
-
-app.delete('/deletestudent', studentCRUD.deleteStudent);
