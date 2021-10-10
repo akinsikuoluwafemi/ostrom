@@ -1,6 +1,6 @@
 
 export interface StudentItem {
-  id: string | number;
+  id: number;
   firstName: string;
   lastName: string;
   courseName: string;
@@ -10,6 +10,6 @@ export interface StudentItem {
 }
 
 export interface Item extends StudentItem {
-  id: number | string;
+  id: number;
 }
 
