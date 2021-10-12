@@ -24,7 +24,7 @@ export default function Home() {
 
 	useEffect(() => {
 			fetchStudentAsync()
-	}, [])
+	}, [fetchStudentAsync])
 	
 	return (
     <div className=" container my-5">

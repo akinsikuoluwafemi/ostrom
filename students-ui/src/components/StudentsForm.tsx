@@ -18,15 +18,15 @@ interface CourseDataProps {
 
 }
 
-interface StudentsFormProps {
+export interface StudentsFormProps {
   action: "add" | "edit";
   data: CourseDataProps;
-  showModal(): any;
-  handleOk(): any;
+  showModal: () => void;
+  handleOk: () => void;
   dob: string;
-  handleCancel(): any;
+  handleCancel: () => void;
   isModalVisible: boolean;
-  handleSubmit: () => void
+  handleSubmit: () => void;
   handleChange:  (e: React.ChangeEvent<HTMLInputElement>) => void
   handleDateChange: (date: any, dateString: any)=> void;
 }
@@ -42,7 +42,7 @@ const StudentsForm: FC<StudentsFormProps> = ({  dob, action, showModal, isModalV
       
       {action === 'add' ? (
         <Button type="primary" className="action-btn" onClick={showModal}>
-        { action === 'add'? 'Add Students' : 'Edit Student'}
+        { action === 'add'? 'Add Student' : 'Edit Student'}
       </Button>
       ): (
          <p className="action-text" onClick={showModal}>Edit</p> 
@@ -50,7 +50,7 @@ const StudentsForm: FC<StudentsFormProps> = ({  dob, action, showModal, isModalV
 
       
 
-      <Modal width="20"  title={action === 'add' ? 'Add Students' : 'Edit Student'} visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}
+      <Modal width="20"  title={action === 'add' ? 'Add Students' : 'Edit Students'} visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}
         footer={[<Button key="submit" type="primary"  onClick={handleSubmit} className="action-btn">
               Save
             </Button>]}>

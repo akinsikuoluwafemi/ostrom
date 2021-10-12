@@ -6,7 +6,7 @@ import '../pages/Home.scss';
 
 
 interface StudentItemProps {
-  student: Student
+  student: Student,
 }
 
 
@@ -15,6 +15,8 @@ interface StudentItemProps {
 const StudentItem: React.FC<StudentItemProps> = ({student}) => {
 
   const {deleteStudentAsync} = useActions()
+
+  
 
     return (
           <tr className="student-table-row">
@@ -33,3 +35,4 @@ const StudentItem: React.FC<StudentItemProps> = ({student}) => {
 }
 
 export default StudentItem
+
