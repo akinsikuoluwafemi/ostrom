@@ -59,19 +59,15 @@ git clone git@github.com:akinsikuoluwafemi/ostrom.git
 
 **Success Response:**
 **Code:** 200 <br/>
-**Content:** ` 
-  {
-    "id": 2,
-    "firstName": "Tyler",
-    "lastName": "Kyle",
-    "courseName": "Intro to Kotlin",
-    "numberOfHrs": "24",
-    "price": "259",
-    "studentDob": "1994/09/05"
-
-  }  
-    
-`
+**Content:** 
+          `{
+            "id": 2,
+            "firstName": "Tyler",
+            "lastName": "Kyle",
+            "courseName": "Intro to Kotlin",
+            "numberOfHrs": "24",
+            "price": "259",
+            "studentDob": "1994/09/05"}`
 
 **Error Response:**
 **Code:** 404 NOT FOUND
