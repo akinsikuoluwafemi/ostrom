@@ -39,6 +39,98 @@ git clone git@github.com:akinsikuoluwafemi/ostrom.git
 ***in another terminal run***
 
 ```
-  cd students-api && npm install && npm run watch-node
+  cd students-api && npm install && npm run dev
 ```
 
+# Students-API documentation
+
+**URL**
+
+/items
+
+**Method:**
+<_The request type_>
+`GET` | `POST` | `DELTE` | `PUT`
+
+**URL Params**
+**Required:**
+
+`id=[interger]`
+
+**Success Response:**
+**Code:** 200 <br/>
+**Content:** `    "id": 2,
+    "firstName": "Tyler",
+    "lastName": "Kyle",
+    "courseName": "Intro to Kotlin",
+    "numberOfHrs": "24",
+    "price": "259",
+    "studentDob": "1994/09/05"
+`
+
+**Error Response:**
+**Code:** 404 NOT FOUND
+
+**Sample Call:**
+
+**Get Request**
+```
+  const data = await axios.get(`${root_url}/items`);
+
+```
+
+**Post Request**
+
+`
+  const student = {
+      "id": 2,
+      "firstName": "Tyler",
+      "lastName": "Kyle",
+      "courseName": "Intro to Kotlin",
+      "numberOfHrs": "24",
+      "price": "259",
+      "studentDob": "1994/09/05"
+
+  }
+`
+
+```
+ const {data} = await axios.post(`${root_url}/items`, student)
+
+```
+
+
+**Update Request**
+
+```
+ const {data} = await axios.put(`${root_url}/items/:id`, student)
+
+```
+
+**Delete Request**
+
+```
+   axios.delete(`${root_url}/items/:id`)
+
+```
+
+
+# React-typescript frontend
+This is the frontend of the application. I made use of React typescript for this and installed a few dependencies like
+
+
+- Axios: For making api calls
+- Redux: For state management 
+- React-redux: For bootstrapping react and redux together. 
+- Node sass: For styling.
+
+- Moment: For data conversion efficiently
+- Redux-thunk: For adding middleware func to the frontend app etc
+
+
+### Testing the app
+Run `npm test`
+
+### Building the app
+
+Run `npm run build`
