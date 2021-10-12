@@ -8,6 +8,9 @@ import express from "express";
 import cors from "cors";
 import helmet from "helmet";
 import { itemsRouter } from './items/items.router';
+import swaggerJsDoc from 'swagger-jsdoc';
+import swaggerUI from 'swagger-ui-express';
+
 
 dotenv.config();
 
@@ -33,10 +36,33 @@ app.use(cors());
 app.use(express.json());
 app.use("/api/student/items", itemsRouter);
 
+// swagger setup
+const options = {
+  definition: {
+    openapi: '3.0.0',
+    info: {
+      title: 'Code Clean Api',
+      version: '1.0.0',
+      description: 'A simple students crud api'
+    },
+    servers: [
+      {
+        url: "http://localhost:7000/"
+      }
+    ]
+  },
+  // apis: ["./items/items.router.ts"]
+  apis: ["**/*.ts"]
+
+}
+
+const swaggerSpec = swaggerJsDoc(options)
+app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerSpec))
 
 /**
  * Server Activation
  */
+
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
