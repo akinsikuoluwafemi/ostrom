@@ -44,6 +44,9 @@ git clone git@github.com:akinsikuoluwafemi/ostrom.git
 
 # Students-API documentation
 
+After starting the server, head over to the [swagger api docs](http://localhost:7000/api-docs/
+)
+
 **URL**
 
 /items
@@ -51,6 +54,8 @@ git clone git@github.com:akinsikuoluwafemi/ostrom.git
 **Method:**
 <_The request type_>
 `GET` | `POST` | `DELTE` | `PUT`
+
+
 
 **URL Params**
 **Required:**
