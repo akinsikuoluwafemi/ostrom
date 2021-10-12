@@ -16,7 +16,10 @@ const StudentItem: React.FC<StudentItemProps> = ({student}) => {
 
   const {deleteStudentAsync} = useActions()
 
-  
+  const DeleteItem = () => {
+    deleteStudentAsync(student.id)
+    alert(`${student.firstName} has been deleted`);
+  }
 
     return (
           <tr className="student-table-row">
@@ -28,7 +31,7 @@ const StudentItem: React.FC<StudentItemProps> = ({student}) => {
               <td>{ student.numberOfHrs}</td>
               <td>{ student.price} €</td>
               <td className="actions"><EditStudent student={student}/></td>
-              <td onClick={() => deleteStudentAsync(student.id)} className="actions">Delete</td>
+              <td onClick={() => DeleteItem()} className="actions">Delete</td>
         </tr>
         
   )
