@@ -19,12 +19,15 @@ export default function Home() {
 		return loading
   });
 
+	console.log(students)
+	console.log(loading)
 
 	const { fetchStudentAsync } = useActions();
 
 	useEffect(() => {
 			fetchStudentAsync()
-	}, [fetchStudentAsync])
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [])
 	
 	return (
     <div className=" container my-5">
