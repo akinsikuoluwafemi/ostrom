@@ -19,8 +19,7 @@ export default function Home() {
 		return loading
   });
 
-	console.log(students)
-	console.log(loading)
+
 
 	const { fetchStudentAsync } = useActions();
 

@@ -24,10 +24,4 @@ yarn-error.log*
 
 .history
 
-students-ui/node_modules
-students-api/node_modules
 
-students-ui/.env
-students-api/.env
-
-students-ui/build
