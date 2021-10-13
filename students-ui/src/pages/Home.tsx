@@ -49,7 +49,7 @@ export default function Home() {
 							</tr>
 						</thead>
 						
-					<Suspense fallback={<div style={{textAlign: 'center', margin: '20px 0'}}> <Spin/></div>}>
+					<Suspense fallback={<div className="loading-spinner"> <Spin/></div>}>
 							<Studentslist students={students}/>
 					</Suspense>
 					
