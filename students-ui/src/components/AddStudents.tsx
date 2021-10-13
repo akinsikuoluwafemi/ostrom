@@ -63,6 +63,7 @@ export default function AddStudents() {
       // setStudentDob(new Date())
 
     }
+    console.log(typeof numberOfHrs)
     
   }
 

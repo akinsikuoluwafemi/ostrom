@@ -83,11 +83,11 @@ const StudentsForm: FC<StudentsFormProps> = ({  dob, action, showModal, isModalV
                     <input type="text" className="form-control" name="courseName" value={courseName} onChange={handleChange} aria-describedby="courseName" placeholder="course-name"/>
                 </td>
                   <td>
-                    <input type="text" className="form-control" name="numberOfHrs" value={numberOfHrs} onChange={handleChange} aria-describedby="numberOfHrs" placeholder="hours"/>
+                    <input type="number" className="form-control" name="numberOfHrs" value={numberOfHrs} onChange={handleChange} aria-describedby="numberOfHrs" placeholder="hours"/>
                     
                 </td>
                   <td>
-                    <input type="text" className="form-control" name="price" value={price} onChange={handleChange} aria-describedby="price" placeholder="price"/>
+                    <input type="number" className="form-control" name="price" value={price} onChange={handleChange} aria-describedby="price" placeholder="price"/>
                 </td>
                
               </tr>
