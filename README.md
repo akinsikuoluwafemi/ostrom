@@ -96,7 +96,6 @@ After starting the server, head over to the [swagger api docs](http://localhost:
       "numberOfHrs": "24",
       "price": "259",
       "studentDob": "1994/09/05"
-
   }
 `
 
@@ -121,6 +120,8 @@ After starting the server, head over to the [swagger api docs](http://localhost:
 ```
 
 
+
+
 # React-typescript frontend
 This is the frontend of the application. I made use of React typescript for this and installed a few dependencies like
 
@@ -132,6 +133,12 @@ This is the frontend of the application. I made use of React typescript for this
 
 - Moment: For data conversion efficiently
 - Redux-thunk: For adding middleware func to the frontend app etc
+
+***I used new react hooks features like lazy loading and suspense***.
+
+***I used reusable components for the add and edit form and also passed react props on the fly.***
+
+***I used conditional rendering where necessary and added custom hooks to my application***
 
 
 ### Testing the app
