@@ -118,7 +118,43 @@ describe("when the `Save` button is pressed", () => {
 })
 
 
+it("that input fields are pressed", () => {
 
+  render(
+      <StudentsForm
+        action={"edit"}
+        dob="Test Date"
+        isModalVisible={true}
+        showModal={() => { }}
+        handleOk={() => { }}
+        handleSubmit={() => { }}
+        handleDateChange={() => { }}
+        handleCancel={() => { }}
+        handleChange={() => { }}
+        data={data}
+      
+      />
+  )
+  
+  userEvent.type(screen.getByPlaceholderText(/first-name/i), "femi")
+  userEvent.type(screen.getByPlaceholderText(/last-name/i), "akin")
+  userEvent.type(screen.getByPlaceholderText(/course-name/i), "java")
+  userEvent.type(screen.getByPlaceholderText(/hours/i), "40")
+  userEvent.type(screen.getByPlaceholderText(/price/i), "500")
+
+  expect(screen.getByPlaceholderText(/first-name/i)).toBeEnabled()
+  expect(screen.getByPlaceholderText(/last-name/i)).toBeEnabled()
+  expect(screen.getByPlaceholderText(/course-name/i)).toBeEnabled()
+  expect(screen.getByPlaceholderText(/hours/i)).toBeEnabled()
+  expect(screen.getByPlaceholderText(/price/i)).toBeEnabled()
+
+  
+
+
+
+
+
+})
 
   
 

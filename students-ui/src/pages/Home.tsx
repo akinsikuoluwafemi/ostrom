@@ -1,11 +1,13 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, lazy, Suspense} from 'react';
 import AddStudents from '../components/AddStudents';
-import Studentslist from '../components/Studentslist';
 import {useActions} from '../hooks/use-actions';
 import { useTypedSelector } from '../hooks/use-typed-selector';
+import { Spin } from 'antd';
+
 import './Home.scss';
 
 
+const Studentslist = lazy(() => import('../components/Studentslist'));
 
 
 export default function Home() {
@@ -13,10 +15,6 @@ export default function Home() {
 	// getting states out of the redux store
 	const students = useTypedSelector(({students: { data}}) => {
 		return data
-  });
-
-	const loading = useTypedSelector(({students: { loading}}) => {
-		return loading
   });
 
 
@@ -29,6 +27,7 @@ export default function Home() {
 	}, [])
 	
 	return (
+			
     <div className=" container my-5">
 
       <div className="mb-4">
@@ -50,9 +49,10 @@ export default function Home() {
 							</tr>
 						</thead>
 						
-						{loading ? <p>Loading...</p> : (
+					<Suspense fallback={<div style={{textAlign: 'center', margin: '20px 0'}}> <Spin/></div>}>
 							<Studentslist students={students}/>
-						)}
+					</Suspense>
+					
 					
 					</table>
     </div>
